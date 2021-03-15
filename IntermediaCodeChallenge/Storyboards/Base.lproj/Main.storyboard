@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FuO-dL-iRH">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AuthViewController" customModule="IntermediaCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYu-FZ-ZsH">
+                                <rect key="frame" x="16" y="565" width="343" height="32"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.61176470588235299" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fen-Kx-j08"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-Wm-HGR">
+                                <rect key="frame" x="16" y="491" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVI-Lj-c8M">
+                                <rect key="frame" x="16" y="441" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH4-9v-BUV">
+                                <rect key="frame" x="16" y="605" width="343" height="32"/>
+                                <color key="backgroundColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="99N-59-qaK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sVI-Lj-c8M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="U85-3y-YZu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bH4-9v-BUV" secondAttribute="trailing" constant="16" id="UEk-ZV-UDT"/>
+                            <constraint firstItem="bH4-9v-BUV" firstAttribute="top" secondItem="zYu-FZ-ZsH" secondAttribute="bottom" constant="8" id="YqP-Dz-Kmi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hAT-Wm-HGR" secondAttribute="trailing" constant="16" id="iEy-7U-xbZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zYu-FZ-ZsH" secondAttribute="trailing" constant="16" id="iKh-aI-bJh"/>
+                            <constraint firstItem="bH4-9v-BUV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lQJ-bU-Qy4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sVI-Lj-c8M" secondAttribute="trailing" constant="16" id="msy-6S-MbA"/>
+                            <constraint firstItem="hAT-Wm-HGR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="n4k-hm-MXG"/>
+                            <constraint firstItem="zYu-FZ-ZsH" firstAttribute="top" secondItem="hAT-Wm-HGR" secondAttribute="bottom" constant="40" id="qTv-o4-bd6"/>
+                            <constraint firstItem="zYu-FZ-ZsH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uZs-9w-3mg"/>
+                            <constraint firstItem="hAT-Wm-HGR" firstAttribute="top" secondItem="sVI-Lj-c8M" secondAttribute="bottom" constant="16" id="wQB-dd-HMr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bH4-9v-BUV" secondAttribute="bottom" constant="30" id="zCB-Fh-oEd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ius-Mr-Lv4"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="sVI-Lj-c8M" id="Bj0-Db-x2L"/>
+                        <outlet property="logInButton" destination="zYu-FZ-ZsH" id="Z40-xY-Odt"/>
+                        <outlet property="passwordTextField" destination="hAT-Wm-HGR" id="l55-Ju-jdv"/>
+                        <outlet property="signUpButton" destination="bH4-9v-BUV" id="9o4-RS-UgZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="96.428571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="utL-yQ-wX5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FuO-dL-iRH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QMV-IS-ao5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="x4f-g6-5Kw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqj-WK-2ll" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="96.428571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
