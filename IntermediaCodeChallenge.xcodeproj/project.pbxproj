@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0E48D6847CEBE3CFF140DE9B /* Pods_IntermediaCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CF6F5C3F569B3884730E73 /* Pods_IntermediaCodeChallenge.framework */; };
+		0E68E24C260125A400C5530F /* SuperheroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E24A260125A400C5530F /* SuperheroesCell.swift */; };
+		0E68E24D260125A400C5530F /* SuperheroesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E24B260125A400C5530F /* SuperheroesCell.xib */; };
+		0E68E252260132F800C5530F /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E251260132F700C5530F /* RobotoCondensed-Bold.ttf */; };
+		0E68E2552601330500C5530F /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E2542601330500C5530F /* RobotoCondensed-Regular.ttf */; };
+		0E68E2582601331100C5530F /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E2572601331100C5530F /* Roboto-Regular.ttf */; };
 		0EFBEFF2260004A50027EFB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF1260004A50027EFB7 /* AppDelegate.swift */; };
 		0EFBEFF4260004A50027EFB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF3260004A50027EFB7 /* SceneDelegate.swift */; };
 		0EFBEFF6260004A50027EFB7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF5260004A50027EFB7 /* AuthViewController.swift */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E68E24A260125A400C5530F /* SuperheroesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroesCell.swift; sourceTree = "<group>"; };
+		0E68E24B260125A400C5530F /* SuperheroesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperheroesCell.xib; sourceTree = "<group>"; };
+		0E68E251260132F700C5530F /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		0E68E2542601330500C5530F /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		0E68E2572601331100C5530F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		0EFBEFEE260004A50027EFB7 /* IntermediaCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntermediaCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFBEFF1260004A50027EFB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFBEFF3260004A50027EFB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E68E2492601257E00C5530F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0E68E250260131ED00C5530F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0E68E251260132F700C5530F /* RobotoCondensed-Bold.ttf */,
+				0E68E2542601330500C5530F /* RobotoCondensed-Regular.ttf */,
+				0E68E2572601331100C5530F /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		0EFBEFE5260004A50027EFB7 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +141,7 @@
 		0EFBF007260005810027EFB7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0E68E250260131ED00C5530F /* Fonts */,
 				0EFBEFFA260004A70027EFB7 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -132,7 +160,6 @@
 		0EFBF0192600075A0027EFB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0EFBF06C260026500027EFB7 /* Cells */,
 				0EFBF08026002CE80027EFB7 /* SuperheroesTVC */,
 				0EFBF08B26002F340027EFB7 /* HeroesVC */,
 				0EFBF08126002CF90027EFB7 /* EventsTVC */,
@@ -190,6 +217,8 @@
 		0EFBF06C260026500027EFB7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0E68E24A260125A400C5530F /* SuperheroesCell.swift */,
+				0E68E24B260125A400C5530F /* SuperheroesCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -197,6 +226,7 @@
 		0EFBF08026002CE80027EFB7 /* SuperheroesTVC */ = {
 			isa = PBXGroup;
 			children = (
+				0EFBF06C260026500027EFB7 /* Cells */,
 				0EFBF08826002F2C0027EFB7 /* SuperheroesViewController.swift */,
 			);
 			path = SuperheroesTVC;
@@ -205,6 +235,7 @@
 		0EFBF08126002CF90027EFB7 /* EventsTVC */ = {
 			isa = PBXGroup;
 			children = (
+				0E68E2492601257E00C5530F /* Cell */,
 				0EFBF08426002F1D0027EFB7 /* EventsViewController.swift */,
 			);
 			path = EventsTVC;
@@ -316,8 +347,12 @@
 			files = (
 				0EFBEFFE260004A70027EFB7 /* LaunchScreen.storyboard in Resources */,
 				0EFBF06226001B4F0027EFB7 /* ToastVC.xib in Resources */,
+				0E68E2582601331100C5530F /* Roboto-Regular.ttf in Resources */,
+				0E68E252260132F800C5530F /* RobotoCondensed-Bold.ttf in Resources */,
+				0E68E24D260125A400C5530F /* SuperheroesCell.xib in Resources */,
 				0EFBF07E26002AE60027EFB7 /* App.storyboard in Resources */,
 				0EFBF0BC26004EB10027EFB7 /* Main.storyboard in Resources */,
+				0E68E2552601330500C5530F /* RobotoCondensed-Regular.ttf in Resources */,
 				0EFBF009260005B20027EFB7 /* GoogleService-Info.plist in Resources */,
 				0EFBEFFB260004A70027EFB7 /* Assets.xcassets in Resources */,
 			);
@@ -384,6 +419,7 @@
 				0EFBF06526001E7E0027EFB7 /* Constants.swift in Sources */,
 				0EFBF09826002FC60027EFB7 /* HeroeViewModel.swift in Sources */,
 				0EFBF08926002F2C0027EFB7 /* SuperheroesViewController.swift in Sources */,
+				0E68E24C260125A400C5530F /* SuperheroesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

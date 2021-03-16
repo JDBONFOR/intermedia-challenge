@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  IntermediaCodeChallenge
-//
-//  Created by Juan Bonforti on 15/03/2021.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -50,6 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 
+// MARK: - Extensions
 extension SceneDelegate {
     
     func checkUserSession() {
@@ -58,7 +52,16 @@ extension SceneDelegate {
         if userID != nil {
             let story = UIStoryboard(name: "App", bundle: nil)
             let homeVC = story.instantiateInitialViewController()!
-            window?.rootViewController = homeVC
+            let nav = UINavigationController.init(rootViewController: homeVC)
+            
+            nav.navigationBar.barTintColor = .navBarColor
+            nav.navigationBar.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 20) ?? UIFont.boldSystemFont(ofSize: 20)
+            ]
+            nav.navigationBar.topItem?.title = "Marvel Challenge"
+            
+            window?.rootViewController = nav
         }
         
     }

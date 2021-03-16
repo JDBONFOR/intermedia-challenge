@@ -11,6 +11,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Firebase
         FirebaseApp.configure()
         
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Roboto-Regular", size: 12)!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Roboto-Regular", size: 12)!], for: .selected)
+        UITabBar.appearance().tintColor = .tabBarSelectedColor
+        UITabBar.appearance().unselectedItemTintColor = .tabBarUnselectedColor
+        
         return true
     }
 

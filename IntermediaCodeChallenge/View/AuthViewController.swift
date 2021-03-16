@@ -81,10 +81,20 @@ private extension AuthViewController {
                     
                     Utils.showToast(in: self, backgroundColor: .successColor, title: "Hi \(email) 👋")
                     Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
+                        
                         let story = UIStoryboard(name: "App", bundle: nil)
                         let homeVC = story.instantiateInitialViewController()!
-                        homeVC.modalPresentationStyle = .fullScreen
-                        self.present(homeVC, animated: true, completion: nil)
+                        let nav = UINavigationController.init(rootViewController: homeVC)
+                        
+                        nav.navigationBar.barTintColor = .navBarColor
+                        nav.navigationBar.titleTextAttributes = [
+                            NSAttributedString.Key.foregroundColor: UIColor.white,
+                            NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 20) ?? UIFont.boldSystemFont(ofSize: 20)
+                        ]
+                        nav.navigationBar.topItem?.title = "Marvel Challenge"
+                        nav.modalPresentationStyle = .fullScreen
+                        self.present(nav, animated: true, completion: nil)
+                        
                     })
                 }
             }

@@ -13,10 +13,32 @@
             <objects>
                 <viewController id="dnU-iF-x81" customClass="EventsViewController" customModule="IntermediaCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wc9-Zo-8ei">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="20N-zl-0gr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BKN-fS-Jnz">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BKN-fS-Jnz" id="x3Y-cq-zQH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kCh-hF-t1n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="20N-zl-0gr" firstAttribute="leading" secondItem="kCh-hF-t1n" secondAttribute="leading" id="ctu-rn-17L"/>
+                            <constraint firstItem="kCh-hF-t1n" firstAttribute="trailing" secondItem="20N-zl-0gr" secondAttribute="trailing" id="icl-AW-aq6"/>
+                            <constraint firstItem="20N-zl-0gr" firstAttribute="top" secondItem="kCh-hF-t1n" secondAttribute="top" id="m5V-Fe-iYy"/>
+                            <constraint firstItem="kCh-hF-t1n" firstAttribute="bottom" secondItem="20N-zl-0gr" secondAttribute="bottom" id="y1z-G9-3zS"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Eventos" image="events_unselected" selectedImage="events_selected" id="4ER-aW-4AE"/>
                 </viewController>
@@ -29,26 +51,52 @@
             <objects>
                 <viewController id="xxE-yy-hKq" customClass="SuperheroesViewController" customModule="IntermediaCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uLM-b8-q1y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gM0-Qt-ffR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Lob-IU-CF8">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lob-IU-CF8" id="r6g-RQ-hz7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kZ4-Ib-KL5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gM0-Qt-ffR" firstAttribute="top" secondItem="kZ4-Ib-KL5" secondAttribute="top" id="78D-yw-0ZC"/>
+                            <constraint firstItem="gM0-Qt-ffR" firstAttribute="leading" secondItem="kZ4-Ib-KL5" secondAttribute="leading" id="PU0-LJ-lty"/>
+                            <constraint firstAttribute="trailing" secondItem="gM0-Qt-ffR" secondAttribute="trailing" id="aH1-hV-tzu"/>
+                            <constraint firstItem="gM0-Qt-ffR" firstAttribute="bottom" secondItem="kZ4-Ib-KL5" secondAttribute="bottom" id="na3-Mw-JZk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Personajes" image="heroes_unselected" selectedImage="heroes_selected" id="vWD-Kr-f75"/>
+                    <connections>
+                        <outlet property="tableView" destination="gM0-Qt-ffR" id="Tp8-qf-uPj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkS-O8-Lu8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1083" y="3"/>
+            <point key="canvasLocation" x="-1084" y="2.2488755622188905"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cqP-s7-duO">
             <objects>
                 <tabBarController id="fyG-GL-0pt" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cde-UB-tbw">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Cde-UB-tbw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="xxE-yy-hKq" kind="relationship" relationship="viewControllers" id="omh-RS-vpp"/>
