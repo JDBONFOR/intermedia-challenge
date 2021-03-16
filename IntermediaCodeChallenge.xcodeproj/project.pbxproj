@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E48D6847CEBE3CFF140DE9B /* Pods_IntermediaCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CF6F5C3F569B3884730E73 /* Pods_IntermediaCodeChallenge.framework */; };
 		0E68E24C260125A400C5530F /* SuperheroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E24A260125A400C5530F /* SuperheroesCell.swift */; };
 		0E68E24D260125A400C5530F /* SuperheroesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E24B260125A400C5530F /* SuperheroesCell.xib */; };
 		0E68E252260132F800C5530F /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E251260132F700C5530F /* RobotoCondensed-Bold.ttf */; };
 		0E68E2552601330500C5530F /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E2542601330500C5530F /* RobotoCondensed-Regular.ttf */; };
 		0E68E2582601331100C5530F /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E2572601331100C5530F /* Roboto-Regular.ttf */; };
+		0E68E26D2601580A00C5530F /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E26C2601580A00C5530F /* NetworkingProvider.swift */; };
+		0E68E27126015A1100C5530F /* HeroesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E27026015A1100C5530F /* HeroesModel.swift */; };
+		0E68E27426015BCB00C5530F /* ResponseWrapperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E27326015BCB00C5530F /* ResponseWrapperModel.swift */; };
+		0E68E2B92601663D00C5530F /* Endpoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E2B82601663D00C5530F /* Endpoints.plist */; };
 		0EFBEFF2260004A50027EFB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF1260004A50027EFB7 /* AppDelegate.swift */; };
 		0EFBEFF4260004A50027EFB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF3260004A50027EFB7 /* SceneDelegate.swift */; };
 		0EFBEFF6260004A50027EFB7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF5260004A50027EFB7 /* AuthViewController.swift */; };
@@ -31,6 +34,7 @@
 		0EFBF09426002FBD0027EFB7 /* SuperheroeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBF09326002FBD0027EFB7 /* SuperheroeViewModel.swift */; };
 		0EFBF09826002FC60027EFB7 /* HeroeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBF09726002FC60027EFB7 /* HeroeViewModel.swift */; };
 		0EFBF0BC26004EB10027EFB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFBF0BA26004EB00027EFB7 /* Main.storyboard */; };
+		5E918E420873D67465C64E6F /* Pods_IntermediaCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E3CB95468F50CE6C903B98 /* Pods_IntermediaCodeChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		0E68E251260132F700C5530F /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		0E68E2542601330500C5530F /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		0E68E2572601331100C5530F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0E68E26C2601580A00C5530F /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		0E68E27026015A1100C5530F /* HeroesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesModel.swift; sourceTree = "<group>"; };
+		0E68E27326015BCB00C5530F /* ResponseWrapperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseWrapperModel.swift; sourceTree = "<group>"; };
+		0E68E2B82601663D00C5530F /* Endpoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Endpoints.plist; sourceTree = "<group>"; };
 		0EFBEFEE260004A50027EFB7 /* IntermediaCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntermediaCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFBEFF1260004A50027EFB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFBEFF3260004A50027EFB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +67,9 @@
 		0EFBF09326002FBD0027EFB7 /* SuperheroeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroeViewModel.swift; sourceTree = "<group>"; };
 		0EFBF09726002FC60027EFB7 /* HeroeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeViewModel.swift; sourceTree = "<group>"; };
 		0EFBF0BB26004EB00027EFB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		54CE1699436AB946168E79B5 /* Pods-IntermediaCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntermediaCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
-		A8CF6F5C3F569B3884730E73 /* Pods_IntermediaCodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntermediaCodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F013ABE0D717984334E60858 /* Pods-IntermediaCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntermediaCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		65E3CB95468F50CE6C903B98 /* Pods_IntermediaCodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntermediaCodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD802D32F66E031FD173BCB /* Pods-IntermediaCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntermediaCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		FDFCE57B592E63D85FB22219 /* Pods-IntermediaCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntermediaCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E48D6847CEBE3CFF140DE9B /* Pods_IntermediaCodeChallenge.framework in Frameworks */,
+				5E918E420873D67465C64E6F /* Pods_IntermediaCodeChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,13 +101,30 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		0E68E26A260157F900C5530F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0E68E26B2601580200C5530F /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0E68E26B2601580200C5530F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0E68E2B82601663D00C5530F /* Endpoints.plist */,
+				0E68E26C2601580A00C5530F /* NetworkingProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		0EFBEFE5260004A50027EFB7 = {
 			isa = PBXGroup;
 			children = (
 				0EFBEFF0260004A50027EFB7 /* IntermediaCodeChallenge */,
 				0EFBEFEF260004A50027EFB7 /* Products */,
 				BA6786C30513166BF96B4D2B /* Pods */,
-				11D7122C1B64771B73FE2131 /* Frameworks */,
+				A760F7CD35B34734A6AFB52A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				0EFBF006260005790027EFB7 /* GoogleServices */,
+				0E68E26A260157F900C5530F /* Core */,
 				0EFBF067260025D00027EFB7 /* Extensions */,
 				0EFBF04A260014D10027EFB7 /* Utils */,
 				0EFBF018260007560027EFB7 /* Model */,
@@ -153,6 +179,7 @@
 				0EFBF08C26002F550027EFB7 /* Events */,
 				0EFBF08E26002F600027EFB7 /* Heroe */,
 				0EFBF08D26002F5B0027EFB7 /* Heroes */,
+				0E68E27326015BCB00C5530F /* ResponseWrapperModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +285,7 @@
 		0EFBF08D26002F5B0027EFB7 /* Heroes */ = {
 			isa = PBXGroup;
 			children = (
+				0E68E27026015A1100C5530F /* HeroesModel.swift */,
 			);
 			path = Heroes;
 			sourceTree = "<group>";
@@ -269,10 +297,10 @@
 			path = Heroe;
 			sourceTree = "<group>";
 		};
-		11D7122C1B64771B73FE2131 /* Frameworks */ = {
+		A760F7CD35B34734A6AFB52A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A8CF6F5C3F569B3884730E73 /* Pods_IntermediaCodeChallenge.framework */,
+				65E3CB95468F50CE6C903B98 /* Pods_IntermediaCodeChallenge.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,8 +308,8 @@
 		BA6786C30513166BF96B4D2B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F013ABE0D717984334E60858 /* Pods-IntermediaCodeChallenge.debug.xcconfig */,
-				54CE1699436AB946168E79B5 /* Pods-IntermediaCodeChallenge.release.xcconfig */,
+				FDFCE57B592E63D85FB22219 /* Pods-IntermediaCodeChallenge.debug.xcconfig */,
+				7CD802D32F66E031FD173BCB /* Pods-IntermediaCodeChallenge.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -293,11 +321,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EFBF002260004A70027EFB7 /* Build configuration list for PBXNativeTarget "IntermediaCodeChallenge" */;
 			buildPhases = (
-				6CD2A58FB637A26AF3E51319 /* [CP] Check Pods Manifest.lock */,
+				E1BF8291D0DD342E5B28977D /* [CP] Check Pods Manifest.lock */,
 				0EFBEFEA260004A50027EFB7 /* Sources */,
 				0EFBEFEB260004A50027EFB7 /* Frameworks */,
 				0EFBEFEC260004A50027EFB7 /* Resources */,
-				95990E71C0AC052B1867E93B /* [CP] Embed Pods Frameworks */,
+				10B6993061DC349F76D586EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,13 +383,31 @@
 				0E68E2552601330500C5530F /* RobotoCondensed-Regular.ttf in Resources */,
 				0EFBF009260005B20027EFB7 /* GoogleService-Info.plist in Resources */,
 				0EFBEFFB260004A70027EFB7 /* Assets.xcassets in Resources */,
+				0E68E2B92601663D00C5530F /* Endpoints.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6CD2A58FB637A26AF3E51319 /* [CP] Check Pods Manifest.lock */ = {
+		10B6993061DC349F76D586EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1BF8291D0DD342E5B28977D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,23 +429,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95990E71C0AC052B1867E93B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IntermediaCodeChallenge/Pods-IntermediaCodeChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -407,7 +436,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E68E27426015BCB00C5530F /* ResponseWrapperModel.swift in Sources */,
 				0EFBF069260025DD0027EFB7 /* UIColor+Extension.swift in Sources */,
+				0E68E27126015A1100C5530F /* HeroesModel.swift in Sources */,
 				0EFBF08526002F1D0027EFB7 /* EventsViewController.swift in Sources */,
 				0EFBF06126001B4F0027EFB7 /* ToastVC.swift in Sources */,
 				0EFBF04C260014EB0027EFB7 /* Utils.swift in Sources */,
@@ -416,6 +447,7 @@
 				0EFBF09426002FBD0027EFB7 /* SuperheroeViewModel.swift in Sources */,
 				0EFBEFF2260004A50027EFB7 /* AppDelegate.swift in Sources */,
 				0EFBEFF4260004A50027EFB7 /* SceneDelegate.swift in Sources */,
+				0E68E26D2601580A00C5530F /* NetworkingProvider.swift in Sources */,
 				0EFBF06526001E7E0027EFB7 /* Constants.swift in Sources */,
 				0EFBF09826002FC60027EFB7 /* HeroeViewModel.swift in Sources */,
 				0EFBF08926002F2C0027EFB7 /* SuperheroesViewController.swift in Sources */,
@@ -563,7 +595,7 @@
 		};
 		0EFBF003260004A70027EFB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F013ABE0D717984334E60858 /* Pods-IntermediaCodeChallenge.debug.xcconfig */;
+			baseConfigurationReference = FDFCE57B592E63D85FB22219 /* Pods-IntermediaCodeChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -583,7 +615,7 @@
 		};
 		0EFBF004260004A70027EFB7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54CE1699436AB946168E79B5 /* Pods-IntermediaCodeChallenge.release.xcconfig */;
+			baseConfigurationReference = 7CD802D32F66E031FD173BCB /* Pods-IntermediaCodeChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -7,5 +7,7 @@ target 'IntermediaCodeChallenge' do
   
 	pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Alamofire', '~> 5.2'
+  pod 'SDWebImage', '~> 4.4'
 
 end

@@ -1,4 +1,5 @@
 import UIKit
+import CommonCrypto
 
 class Utils: NSObject {
     
@@ -18,6 +19,20 @@ class Utils: NSObject {
                 controller.dismiss(animated: true, completion: nil)
             })
         })
+    }
+    
+    // Endpoint.plist
+    public static func getEndpoints() -> [String: Any]? {
+        guard let path = Bundle.main.path(forResource: Constants.EndpointDictionary, ofType: Constants.EndpointExtension) else {
+            return nil
+        }
+        guard let dictionary = NSDictionary(contentsOfFile: path) else {
+            return nil
+        }
+        guard let result = dictionary as? [String: Any] else {
+            return nil
+        }
+        return result
     }
     
 }
