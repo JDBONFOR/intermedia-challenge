@@ -60,6 +60,7 @@ private extension AuthViewController {
     func authUser(_ email: String, _ password: String, _ createUser: Bool) {
         
         if createUser {
+            
             Auth.auth().createUser(withEmail: email, password: password) { ( result, error) in
                 if let error = error {
                     Utils.showToast(in: self, backgroundColor: .errorColor, title: error.localizedDescription)
@@ -67,17 +68,27 @@ private extension AuthViewController {
                     Utils.showToast(in: self, backgroundColor: .successColor, title: "Account created successfully, please Log in")
                 }
             }
+            
         } else {
+            
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 if let error = error {
                     Utils.showToast(in: self, backgroundColor: .errorColor, title: error.localizedDescription)
-                } else {
+                } else if let result = result {
+                    
+                    print("result \(result.user.uid)")
+                    UserDefaults.standard.set(result.user.uid, forKey: "user")
+                    
                     Utils.showToast(in: self, backgroundColor: .successColor, title: "Hi \(email) 👋")
+                    Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
+                        let story = UIStoryboard(name: "App", bundle: nil)
+                        let homeVC = story.instantiateInitialViewController()!
+                        homeVC.modalPresentationStyle = .fullScreen
+                        self.present(homeVC, animated: true, completion: nil)
+                    })
                 }
             }
+            
         }
-        
-        
-    }
-    
+    }    
 }
