@@ -11,4 +11,4 @@ En este challenge lo que esperamos es que puedas hacer una aplicación que funci
 - Firebase
 - FirebaseAuth
 - Alamofire
-
+- SDWebImage
