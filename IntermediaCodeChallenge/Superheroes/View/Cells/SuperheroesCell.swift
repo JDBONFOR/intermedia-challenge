@@ -12,6 +12,13 @@ class SuperheroesCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        clean()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        clean()
     }
         
 }
@@ -30,6 +37,12 @@ extension SuperheroesCell {
             guard let self = self, let image = image else { return }
             self.avatarImage.image = image
         })
+    }
+    
+    func clean() {
+        avatarImage.image = nil
+        titleLabel.text = ""
+        descriptionLabel.text = ""
     }
     
 }

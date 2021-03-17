@@ -19,6 +19,7 @@
 		0E68E2E32602621B00C5530F /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E2E22602621B00C5530F /* EventsModel.swift */; };
 		0E68E2E72602648400C5530F /* EventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E2E52602648400C5530F /* EventsCell.swift */; };
 		0E68E2E82602648400C5530F /* EventsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E2E62602648400C5530F /* EventsCell.xib */; };
+		0E68E2FB2602865100C5530F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBF06426001E7E0027EFB7 /* Constants.swift */; };
 		0EFBEFF2260004A50027EFB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF1260004A50027EFB7 /* AppDelegate.swift */; };
 		0EFBEFF4260004A50027EFB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF3260004A50027EFB7 /* SceneDelegate.swift */; };
 		0EFBEFF6260004A50027EFB7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF5260004A50027EFB7 /* AuthViewController.swift */; };
@@ -28,7 +29,6 @@
 		0EFBF04C260014EB0027EFB7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBF04B260014EB0027EFB7 /* Utils.swift */; };
 		0EFBF06126001B4F0027EFB7 /* ToastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBF05F26001B4F0027EFB7 /* ToastVC.swift */; };
 		0EFBF06226001B4F0027EFB7 /* ToastVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EFBF06026001B4F0027EFB7 /* ToastVC.xib */; };
-		0EFBF06526001E7E0027EFB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBF06426001E7E0027EFB7 /* Constants.swift */; };
 		0EFBF069260025DD0027EFB7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBF068260025DD0027EFB7 /* UIColor+Extension.swift */; };
 		0EFBF07E26002AE60027EFB7 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFBF07D26002AE60027EFB7 /* App.storyboard */; };
 		0EFBF08526002F1D0027EFB7 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBF08426002F1D0027EFB7 /* EventsViewController.swift */; };
@@ -508,10 +508,10 @@
 				0EFBEFF2260004A50027EFB7 /* AppDelegate.swift in Sources */,
 				0EFBEFF4260004A50027EFB7 /* SceneDelegate.swift in Sources */,
 				0E68E26D2601580A00C5530F /* NetworkingProvider.swift in Sources */,
-				0EFBF06526001E7E0027EFB7 /* Constants.swift in Sources */,
 				0EFBF09826002FC60027EFB7 /* HeroeViewModel.swift in Sources */,
 				0EFBF08926002F2C0027EFB7 /* SuperheroesViewController.swift in Sources */,
 				0E68E24C260125A400C5530F /* SuperheroesCell.swift in Sources */,
+				0E68E2FB2602865100C5530F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

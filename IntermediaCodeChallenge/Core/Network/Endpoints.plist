@@ -5,7 +5,7 @@
 	<key>events</key>
 	<dict>
 		<key>url</key>
-		<string>v1/public/events/%@?ts=1&amp;apikey=%@&amp;hash=%@</string>
+		<string>v1/public/events?ts=1&amp;apikey=%@&amp;hash=%@</string>
 	</dict>
 	<key>heroe</key>
 	<dict>

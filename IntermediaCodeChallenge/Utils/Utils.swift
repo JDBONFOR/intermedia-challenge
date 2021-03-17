@@ -35,4 +35,21 @@ class Utils: NSObject {
         return result
     }
     
+    // Date formatter
+    public static func formateDate(_ date: String) -> String {
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "d MMMM yyyy"
+
+        if let newDate = dateFormatterGet.date(from: date) {
+            return dateFormatterPrint.string(from: newDate)
+        } else {
+            return ""
+        }
+        
+    }
+    
 }
