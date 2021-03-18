@@ -15,6 +15,15 @@ class SuperheroesViewController: UIViewController {
         setupUI()
         fetchData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let sender = sender as? Int else { return }
+        
+        if segue.identifier == "loadHeroe" {
+            let heroeVC = segue.destination as! HeroeViewController
+            heroeVC.viewModel = HeroeViewModel(id: sender)
+        }
+    }
 
 }
 
@@ -55,6 +64,12 @@ extension SuperheroesViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "loadHeroe", sender: viewModel.dataSource[indexPath.row].id)
+        
+    }
+    
 }
 
 // SuperheroesViewModelProtocol

@@ -84,11 +84,43 @@
                     <tabBarItem key="tabBarItem" title="Personajes" image="heroes_unselected" selectedImage="heroes_selected" id="vWD-Kr-f75"/>
                     <connections>
                         <outlet property="tableView" destination="gM0-Qt-ffR" id="Tp8-qf-uPj"/>
+                        <segue destination="sf1-MQ-bAS" kind="show" identifier="loadHeroe" id="XAu-Mw-Wiy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkS-O8-Lu8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1084" y="2.2488755622188905"/>
+        </scene>
+        <!--Heroe View Controller-->
+        <scene sceneID="Ee8-Y0-S3w">
+            <objects>
+                <viewController id="sf1-MQ-bAS" customClass="HeroeViewController" customModule="IntermediaCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="09k-kq-SmJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oJg-8I-qLZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cNC-Xn-bFO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oJg-8I-qLZ" firstAttribute="leading" secondItem="cNC-Xn-bFO" secondAttribute="leading" id="KeB-Tr-S54"/>
+                            <constraint firstItem="cNC-Xn-bFO" firstAttribute="bottom" secondItem="oJg-8I-qLZ" secondAttribute="bottom" id="LYh-Zf-z7V"/>
+                            <constraint firstItem="oJg-8I-qLZ" firstAttribute="top" secondItem="cNC-Xn-bFO" secondAttribute="top" id="SwQ-it-OYE"/>
+                            <constraint firstItem="cNC-Xn-bFO" firstAttribute="trailing" secondItem="oJg-8I-qLZ" secondAttribute="trailing" id="mxw-RJ-prp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wsh-gy-OIt"/>
+                    <connections>
+                        <outlet property="tableView" destination="oJg-8I-qLZ" id="s8h-8e-Qfr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ol0-M0-Ufe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="2.2488755622188905"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cqP-s7-duO">

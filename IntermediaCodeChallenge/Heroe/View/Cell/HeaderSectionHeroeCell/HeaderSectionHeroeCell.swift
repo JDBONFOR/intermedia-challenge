@@ -1,12 +1,11 @@
 import UIKit
 import SDWebImage
 
-class SuperheroesCell: UITableViewCell {
+class HeaderSectionHeroeCell: UITableViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet private weak var avatarImage: UIImageView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Life Cycle
     override func awakeFromNib() {
@@ -24,24 +23,22 @@ class SuperheroesCell: UITableViewCell {
 }
 
 // MARK: - Extension
-extension SuperheroesCell {
+extension HeaderSectionHeroeCell {
     
-    func setupCell(_ model: HeroesModel) {
+    func setupCell(_ model: HeaderSectionHeroeCellViewModel) {
         
-        titleLabel.text = model.name
-        descriptionLabel.text = model.description
+        let imageUrl: String = model.imageUrl
         
-        let imageUrl = model.thumbnail.path + "." + model.thumbnail.fileExtension
-
         SDWebImageDownloader.shared().downloadImage(with: URL(string: imageUrl), options: [SDWebImageDownloaderOptions.allowInvalidSSLCertificates, SDWebImageDownloaderOptions.useNSURLCache, SDWebImageDownloaderOptions.scaleDownLargeImages], progress: nil, completed: { [weak self] (image, data, error, result) in
             guard let self = self, let image = image else { return }
             self.avatarImage.image = image
         })
+        
+        descriptionLabel.text = model.description
     }
     
     func clean() {
         avatarImage.image = nil
-        titleLabel.text = nil
         descriptionLabel.text = nil
     }
     
