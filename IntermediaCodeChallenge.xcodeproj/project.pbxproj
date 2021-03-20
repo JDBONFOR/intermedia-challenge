@@ -32,6 +32,7 @@
 		0E68E32E26040BCB00C5530F /* ComicsSectionHeroeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E32C26040BCB00C5530F /* ComicsSectionHeroeCell.swift */; };
 		0E68E32F26040BCB00C5530F /* ComicsSectionHeroeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E32D26040BCB00C5530F /* ComicsSectionHeroeCell.xib */; };
 		0E68E36926063EB600C5530F /* HeaderSectionEventsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E36826063EB600C5530F /* HeaderSectionEventsCellViewModel.swift */; };
+		0E68E3852606801800C5530F /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E3842606801800C5530F /* ErrorModel.swift */; };
 		0EFBEFF2260004A50027EFB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF1260004A50027EFB7 /* AppDelegate.swift */; };
 		0EFBEFF4260004A50027EFB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF3260004A50027EFB7 /* SceneDelegate.swift */; };
 		0EFBEFF6260004A50027EFB7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF5260004A50027EFB7 /* AuthViewController.swift */; };
@@ -77,6 +78,7 @@
 		0E68E32C26040BCB00C5530F /* ComicsSectionHeroeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsSectionHeroeCell.swift; sourceTree = "<group>"; };
 		0E68E32D26040BCB00C5530F /* ComicsSectionHeroeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicsSectionHeroeCell.xib; sourceTree = "<group>"; };
 		0E68E36826063EB600C5530F /* HeaderSectionEventsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionEventsCellViewModel.swift; sourceTree = "<group>"; };
+		0E68E3842606801800C5530F /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		0EFBEFEE260004A50027EFB7 /* IntermediaCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntermediaCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFBEFF1260004A50027EFB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFBEFF3260004A50027EFB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				0E68E27326015BCB00C5530F /* ResponseWrapperModel.swift */,
+				0E68E3842606801800C5530F /* ErrorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				0E68E3192604090700C5530F /* TitleSectionHeroeCellViewModel.swift in Sources */,
 				0EFBF04C260014EB0027EFB7 /* Utils.swift in Sources */,
 				0EFBEFF6260004A50027EFB7 /* AuthViewController.swift in Sources */,
+				0E68E3852606801800C5530F /* ErrorModel.swift in Sources */,
 				0EFBF09026002F9C0027EFB7 /* EventsViewModel.swift in Sources */,
 				0EFBF09426002FBD0027EFB7 /* SuperheroesViewModel.swift in Sources */,
 				0EFBEFF2260004A50027EFB7 /* AppDelegate.swift in Sources */,

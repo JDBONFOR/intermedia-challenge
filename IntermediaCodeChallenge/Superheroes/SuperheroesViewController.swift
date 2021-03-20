@@ -7,7 +7,7 @@ class SuperheroesViewController: UIViewController {
     
     // MARK: - Vars
     private var viewModel: SuperheroesViewModel = SuperheroesViewModel()
-    
+        
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ private extension SuperheroesViewController {
     }
     
     func fetchData() {
-        viewModel.fetchData()
+        viewModel.fetchData(limit: viewModel.limit)
     }
 }
 
@@ -68,11 +68,34 @@ extension SuperheroesViewController: UITableViewDelegate, UITableViewDataSource 
         
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (!viewModel.isMoreDataLoading) {
+            
+            let scrollViewContentHeight = tableView.contentSize.height
+            let scrollOffsetThreshold = scrollViewContentHeight - tableView.bounds.size.height
+            
+            if(scrollView.contentOffset.y > scrollOffsetThreshold && tableView.isDragging) {
+                viewModel.isMoreDataLoading = true
+        
+                viewModel.limit += 20
+                let from: Int = viewModel.limit < viewModel.totalItems ? viewModel.limit : viewModel.totalItems
+                
+                viewModel.fetchData(limit: from)
+            }
+        }
+    }
+    
 }
 
 // SuperheroesViewModelProtocol
 extension SuperheroesViewController: SuperheroesViewModelProtocol {
+    func showError(_ error: Error) {
+        Utils.showToast(in: self, backgroundColor: .errorColor, title: error.localizedDescription)
+    }
+    
     func finishLoadData() {
         tableView.reloadData()
     }
+    
+    
 }

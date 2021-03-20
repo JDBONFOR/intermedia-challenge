@@ -28,7 +28,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-qW-XUU">
                         <rect key="frame" x="8" y="8" width="304" height="120"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-hT-N8X">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="activit" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-hT-N8X">
                                 <rect key="frame" x="17" y="17" width="86" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="J25-3j-JAM"/>
@@ -65,6 +65,13 @@
                                     <constraint firstAttribute="width" constant="20" id="oja-xc-0fR"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="tbY-3t-zRB">
+                                <rect key="frame" x="50" y="50" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Xvs-Vy-99b"/>
+                                    <constraint firstAttribute="height" constant="20" id="qYT-55-lFN"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -74,7 +81,9 @@
                             <constraint firstItem="cky-lm-2f8" firstAttribute="centerY" secondItem="bgr-qW-XUU" secondAttribute="centerY" id="FrY-tU-srh"/>
                             <constraint firstItem="iNF-hT-N8X" firstAttribute="leading" secondItem="bgr-qW-XUU" secondAttribute="leading" constant="17" id="IWc-Kf-lBS"/>
                             <constraint firstAttribute="height" constant="120" id="Jex-n2-zdn"/>
+                            <constraint firstItem="tbY-3t-zRB" firstAttribute="leading" secondItem="bgr-qW-XUU" secondAttribute="leading" constant="50" id="KEw-gL-H3b"/>
                             <constraint firstAttribute="trailing" secondItem="cky-lm-2f8" secondAttribute="trailing" constant="26" id="NmX-34-4GT"/>
+                            <constraint firstItem="tbY-3t-zRB" firstAttribute="centerY" secondItem="bgr-qW-XUU" secondAttribute="centerY" id="QtM-BQ-sfB"/>
                             <constraint firstItem="8E5-bH-POH" firstAttribute="top" secondItem="bgr-qW-XUU" secondAttribute="top" constant="17" id="RDT-b2-0pe"/>
                             <constraint firstItem="iNF-hT-N8X" firstAttribute="centerY" secondItem="bgr-qW-XUU" secondAttribute="centerY" id="WeM-cw-vHF"/>
                             <constraint firstItem="iNF-hT-N8X" firstAttribute="top" secondItem="bgr-qW-XUU" secondAttribute="top" constant="17" id="hDT-BL-Iqi"/>
@@ -103,6 +112,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="activit" width="128" height="128"/>
         <image name="cell-arrow" width="492" height="492"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

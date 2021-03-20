@@ -5,7 +5,7 @@
 	<key>events</key>
 	<dict>
 		<key>url</key>
-		<string>v1/public/events?ts=1&amp;apikey=%@&amp;hash=%@</string>
+		<string>v1/public/events?ts=1&amp;apikey=%@&amp;hash=%@&amp;limit=%@</string>
 	</dict>
 	<key>heroe</key>
 	<dict>
@@ -15,7 +15,7 @@
 	<key>heroes</key>
 	<dict>
 		<key>url</key>
-		<string>v1/public/characters?ts=1&amp;apikey=%@&amp;hash=%@</string>
+		<string>v1/public/characters?ts=1&amp;apikey=%@&amp;hash=%@&amp;limit=%@</string>
 	</dict>
 </dict>
 </plist>

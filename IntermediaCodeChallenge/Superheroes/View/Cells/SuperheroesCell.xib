@@ -47,6 +47,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1Fh-fp-SPU">
+                                <rect key="frame" x="50" y="50" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -58,8 +61,10 @@
                             <constraint firstItem="1PY-Hy-rK5" firstAttribute="top" secondItem="HiM-tX-JXK" secondAttribute="top" id="Sbq-9V-nkG"/>
                             <constraint firstAttribute="bottom" secondItem="1PY-Hy-rK5" secondAttribute="bottom" id="Tkv-r3-Cim"/>
                             <constraint firstItem="1PY-Hy-rK5" firstAttribute="leading" secondItem="HiM-tX-JXK" secondAttribute="leading" id="V2y-53-76m"/>
+                            <constraint firstItem="1Fh-fp-SPU" firstAttribute="centerY" secondItem="HiM-tX-JXK" secondAttribute="centerY" id="Vle-2I-frs"/>
                             <constraint firstItem="VIs-12-xHj" firstAttribute="leading" secondItem="1PY-Hy-rK5" secondAttribute="trailing" constant="16" id="i4e-r2-dEz"/>
                             <constraint firstItem="VIs-12-xHj" firstAttribute="top" secondItem="mtf-B6-DV2" secondAttribute="bottom" constant="9" id="iCN-9l-QQ5"/>
+                            <constraint firstItem="1Fh-fp-SPU" firstAttribute="leading" secondItem="HiM-tX-JXK" secondAttribute="leading" constant="50" id="tez-9z-bZ9"/>
                         </constraints>
                     </view>
                 </subviews>

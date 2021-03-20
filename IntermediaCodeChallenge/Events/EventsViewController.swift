@@ -37,7 +37,7 @@ private extension EventsViewController {
     }
     
     func fetchData() {
-        viewModel.fetchData()
+        viewModel.fetchData(limit: viewModel.limit)
     }
     
 }
@@ -109,14 +109,33 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
         if let eventHeader = tableView.cellForRow(at: indexPath) as? HeaderSectionEventsCell {
             eventHeader.toggleCollapseIndicator(viewModel.dataSource[indexPath.section].isOpened)
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (!viewModel.isMoreDataLoading) {
+            
+            let scrollViewContentHeight = tableView.contentSize.height
+            let scrollOffsetThreshold = scrollViewContentHeight - tableView.bounds.size.height
+            
+            if(scrollView.contentOffset.y > scrollOffsetThreshold && tableView.isDragging) {
+                viewModel.isMoreDataLoading = true
         
-        print(viewModel.dataSource[indexPath.section])
+                viewModel.limit += 20
+                let from: Int = viewModel.limit < viewModel.totalItems ? viewModel.limit : viewModel.totalItems
+                
+                viewModel.fetchData(limit: from)
+            }
+        }
     }
     
 }
 
 // EventsViewModelProtocol
 extension EventsViewController: EventsViewModelProtocol {
+    func showError(_ error: Error) {
+        Utils.showToast(in: self, backgroundColor: .errorColor, title: error.localizedDescription)
+    }
+    
     func finishLoadData() {
         tableView.reloadData()
     }
