@@ -7,6 +7,7 @@ protocol EventsViewModelProtocol: class {
 public class EventsViewModel {
     
     var dataSource: [EventsModel] = []
+    var titleDataSource: [TitleSectionHeroeCellViewModel] = []
     var delegate: EventsViewModelProtocol?
     
     init() { }
@@ -27,12 +28,21 @@ extension EventsViewModel {
         
         NetworkingProvider.shared.fetchData(url: url) { (result: RequestResponseWrapperModel<RequestResponseDataWrapperModel<EventsModel>>?, error) in
             if let error = error {
+                
                 print("Error ==> \(error)")
+                
             } else if let result = result {
+                self.createTitleSection()
                 self.dataSource = result.data.results
                 self.delegate?.finishLoadData()
             }
         }
         
     }
+    
+    func createTitleSection() {
+        let title = "comics a discutir"
+        self.titleDataSource.append(TitleSectionHeroeCellViewModel(title: title.uppercased()))
+    }
+    
 }

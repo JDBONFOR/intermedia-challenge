@@ -76,7 +76,10 @@ private extension AuthViewController {
                     Utils.showToast(in: self, backgroundColor: .errorColor, title: error.localizedDescription)
                 } else if let result = result {
                     
+                    #if DEBUG
                     print("result \(result.user.uid)")
+                    #endif
+                    
                     UserDefaults.standard.set(result.user.uid, forKey: "user")
                     
                     Utils.showToast(in: self, backgroundColor: .successColor, title: "Hi \(email) 👋")

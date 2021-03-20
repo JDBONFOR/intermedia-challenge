@@ -36,21 +36,39 @@ extension HeroeViewModel {
                 print("Error ==> \(error)")
             } else if let result = result, let heroe = result.data.results.first {
                 
-                let imageUrl = heroe.thumbnail.path + "." + heroe.thumbnail.fileExtension
-                self.headerDataSource.append(HeaderSectionHeroeCellViewModel(imageUrl: imageUrl, description: heroe.description ?? ""))
-                
-                let title = "Comics en los que aparece:"
-                self.titleDataSource.append(TitleSectionHeroeCellViewModel(title: title.uppercased()))
-                
-                heroe.comics.items.forEach { comic in
-                    self.comicsDataSource.append(ComicsSectionHeroeCellViewModel(title: comic.name, date: ""))
-                }
-                
-                self.titleNavigator = heroe.name
+                self.createHeaderSection(heroe)
+                self.createTitleSection()
+                self.createCommicsSection(heroe)
+                self.setNatigationTitle(heroe.name)
                 
                 self.delegate?.finishLoadData()
                 
             }
         }
     }    
+}
+
+// MARK: - Private Methods
+private extension HeroeViewModel {
+    
+    func createHeaderSection(_ heroe: HeroeModel) {
+        let imageUrl = heroe.thumbnail.path + "." + heroe.thumbnail.fileExtension
+        self.headerDataSource.append(HeaderSectionHeroeCellViewModel(imageUrl: imageUrl, description: heroe.description ?? ""))
+    }
+    
+    func createTitleSection() {
+        let title = "Comics en los que aparece:"
+        self.titleDataSource.append(TitleSectionHeroeCellViewModel(title: title.uppercased()))
+    }
+    
+    func createCommicsSection(_ heroe: HeroeModel) {
+        heroe.comics.items.forEach { comic in
+            self.comicsDataSource.append(ComicsSectionHeroeCellViewModel(title: comic.name, date: ""))
+        }
+    }
+    
+    func setNatigationTitle(_ name: String) {
+        self.titleNavigator = name
+    }
+    
 }

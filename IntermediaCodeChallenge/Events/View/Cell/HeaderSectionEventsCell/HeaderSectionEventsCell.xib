@@ -18,7 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventsCell" rowHeight="128" id="KGk-i7-Jjw" customClass="EventsCell" customModule="IntermediaCodeChallenge" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderSectionEventsCell" rowHeight="128" id="KGk-i7-Jjw" customClass="HeaderSectionEventsCell" customModule="IntermediaCodeChallenge" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -36,7 +36,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8E5-bH-POH">
-                                <rect key="frame" x="136" y="17" width="138" height="28.5"/>
+                                <rect key="frame" x="136" y="17" width="113" height="28.5"/>
                                 <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,16 +58,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="cky-lm-2f8">
+                                <rect key="frame" x="258" y="50" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fYj-90-jge"/>
+                                    <constraint firstAttribute="width" constant="20" id="oja-xc-0fR"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8E5-bH-POH" secondAttribute="trailing" constant="55" id="0Bj-aG-u6V"/>
                             <constraint firstItem="LjR-An-GH2" firstAttribute="leading" secondItem="iNF-hT-N8X" secondAttribute="trailing" constant="33" id="1iH-U7-HeE"/>
                             <constraint firstAttribute="bottom" secondItem="iNF-hT-N8X" secondAttribute="bottom" constant="17" id="EOi-RI-QN2"/>
+                            <constraint firstItem="cky-lm-2f8" firstAttribute="centerY" secondItem="bgr-qW-XUU" secondAttribute="centerY" id="FrY-tU-srh"/>
                             <constraint firstItem="iNF-hT-N8X" firstAttribute="leading" secondItem="bgr-qW-XUU" secondAttribute="leading" constant="17" id="IWc-Kf-lBS"/>
                             <constraint firstAttribute="height" constant="120" id="Jex-n2-zdn"/>
+                            <constraint firstAttribute="trailing" secondItem="cky-lm-2f8" secondAttribute="trailing" constant="26" id="NmX-34-4GT"/>
                             <constraint firstItem="8E5-bH-POH" firstAttribute="top" secondItem="bgr-qW-XUU" secondAttribute="top" constant="17" id="RDT-b2-0pe"/>
                             <constraint firstItem="iNF-hT-N8X" firstAttribute="centerY" secondItem="bgr-qW-XUU" secondAttribute="centerY" id="WeM-cw-vHF"/>
-                            <constraint firstAttribute="trailing" secondItem="8E5-bH-POH" secondAttribute="trailing" constant="30" id="h44-qm-ZjA"/>
                             <constraint firstItem="iNF-hT-N8X" firstAttribute="top" secondItem="bgr-qW-XUU" secondAttribute="top" constant="17" id="hDT-BL-Iqi"/>
                             <constraint firstItem="8E5-bH-POH" firstAttribute="leading" secondItem="iNF-hT-N8X" secondAttribute="trailing" constant="33" id="mau-RF-4D0"/>
                             <constraint firstItem="LjR-An-GH2" firstAttribute="top" secondItem="8E5-bH-POH" secondAttribute="bottom" constant="9" id="rOq-bo-pEj"/>
@@ -85,6 +94,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="avatarImage" destination="iNF-hT-N8X" id="6my-Jc-xIj"/>
+                <outlet property="collapseIndicadorImage" destination="cky-lm-2f8" id="EDF-N8-nj2"/>
                 <outlet property="endLabel" destination="0r3-Ud-43r" id="m84-rS-fkS"/>
                 <outlet property="startLabel" destination="Cxu-yF-rXn" id="XdE-Dc-pXt"/>
                 <outlet property="titleLabel" destination="8E5-bH-POH" id="yht-Eq-FwR"/>
@@ -93,6 +103,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="cell-arrow" width="492" height="492"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

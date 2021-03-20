@@ -35,9 +35,7 @@ private extension SuperheroesViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        
-        self.navigationController?.navigationItem.title = "Prueba"
-        
+                
         viewModel.delegate = self
         
         // Register Cell

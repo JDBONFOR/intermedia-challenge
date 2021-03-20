@@ -6,4 +6,23 @@ struct EventsModel: Codable {
     let start: String?
     let end: String?
     let thumbnail: Thumbnail
+    let comics: Comics
+    
+    // Custom
+    var isOpened: Bool = false
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, start, end, thumbnail, comics
+    }
+}
+
+extension EventsModel {
+    
+    mutating func open() {
+        isOpened = true
+    }
+    
+    mutating func close() {
+        isOpened     = false
+    }
 }

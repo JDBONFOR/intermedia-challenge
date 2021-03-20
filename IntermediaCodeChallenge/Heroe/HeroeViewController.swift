@@ -64,7 +64,7 @@ extension HeroeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderSectionHeroeCell", for: indexPath) as! HeaderSectionHeroeCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderSectionHeroeCell", for: indexPath) as? HeaderSectionHeroeCell else { return UITableViewCell() }
             let data = viewModel.headerDataSource[indexPath.row]
             
             cell.setupCell(HeaderSectionHeroeCellViewModel(imageUrl: data.imageUrl, description: data.description))
@@ -72,7 +72,7 @@ extension HeroeViewController: UITableViewDelegate, UITableViewDataSource {
         
         } else if indexPath.section == 1 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TitleSectionHeroeCell", for: indexPath) as! TitleSectionHeroeCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TitleSectionHeroeCell", for: indexPath) as? TitleSectionHeroeCell else { return UITableViewCell() }
             let data = viewModel.titleDataSource[indexPath.row]
             
             cell.setupCell(TitleSectionHeroeCellViewModel(title: data.title))
@@ -80,7 +80,7 @@ extension HeroeViewController: UITableViewDelegate, UITableViewDataSource {
         
         } else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ComicsSectionHeroeCell", for: indexPath) as! ComicsSectionHeroeCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ComicsSectionHeroeCell", for: indexPath) as? ComicsSectionHeroeCell else { return UITableViewCell() }
             let data = viewModel.comicsDataSource[indexPath.row]
             
             cell.setupCell(ComicsSectionHeroeCellViewModel(title: data.title, date: ""))
