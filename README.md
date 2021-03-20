@@ -1,4 +1,4 @@
-# Inermedia - Challenge
+# Intermedia - Challenge
 
 ## Anotaciones
 Los fanáticos de los cómics están ansiosos por ver los avances en la nueva app de Marvel y poder así obtener información actualizada de sus personajes favoritos. ¿Te parece que podes ser parte de esta app?
@@ -12,3 +12,4 @@ En este challenge lo que esperamos es que puedas hacer una aplicación que funci
 - FirebaseAuth
 - Alamofire
 - SDWebImage
+- Lottie
