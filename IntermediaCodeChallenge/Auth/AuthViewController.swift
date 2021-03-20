@@ -73,7 +73,9 @@ private extension AuthViewController {
             
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 if let error = error {
+                    
                     Utils.showToast(in: self, backgroundColor: .errorColor, title: error.localizedDescription)
+                    
                 } else if let result = result {
                     
                     #if DEBUG

@@ -3,6 +3,8 @@ import SDWebImage
 
 protocol HeroeViewModelProtocol: class {
     func finishLoadData()
+    func showLoader()
+    func hideLoader()
 }
 
 public class HeroeViewModel {
@@ -24,6 +26,8 @@ extension HeroeViewModel {
     
     func fetchData() {
         
+        self.delegate?.showLoader()
+        
         guard let endpoints = Utils.getEndpoints() else { return }
         guard let endpointsData = endpoints[Constants.EndpointKeys.heroe] as? [String: Any] else { return }
         guard let urlString = endpointsData[Constants.EndpointKeys.url] as? String else { return }
@@ -32,6 +36,9 @@ extension HeroeViewModel {
         let url = Constants.baseUrl + urlFormatted
         
         NetworkingProvider.shared.fetchData(url: url) { (result: RequestResponseWrapperModel<RequestResponseDataWrapperModel<HeroeModel>>?, error) in
+            
+            self.delegate?.hideLoader()
+            
             if let error = error {
                 print("Error ==> \(error)")
             } else if let result = result, let heroe = result.data.results.first {

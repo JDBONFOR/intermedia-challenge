@@ -113,11 +113,12 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (!viewModel.isMoreDataLoading) {
-            
+                       
             let scrollViewContentHeight = tableView.contentSize.height
             let scrollOffsetThreshold = scrollViewContentHeight - tableView.bounds.size.height
             
             if(scrollView.contentOffset.y > scrollOffsetThreshold && tableView.isDragging) {
+                
                 viewModel.isMoreDataLoading = true
         
                 viewModel.limit += 20
@@ -132,6 +133,14 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
 
 // EventsViewModelProtocol
 extension EventsViewController: EventsViewModelProtocol {
+    func showLoader() {
+        Utils.showLoader(in: self)
+    }
+    
+    func hideLoader() {
+        Utils.hideLoader(in: self)
+    }
+    
     func showError(_ error: Error) {
         Utils.showToast(in: self, backgroundColor: .errorColor, title: error.localizedDescription)
     }

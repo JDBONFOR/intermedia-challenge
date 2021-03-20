@@ -21,6 +21,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="394" height="489"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FjP-eb-Po0">
+                        <rect key="frame" x="187" y="126" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="DT5-26-Sop"/>
+                            <constraint firstAttribute="width" constant="20" id="cuF-Mo-OZL"/>
+                        </constraints>
+                    </activityIndicatorView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FfO-Jl-TLX">
                         <rect key="frame" x="0.0" y="0.0" width="394" height="360"/>
                         <constraints>
@@ -38,7 +45,9 @@
                     <constraint firstItem="rYG-F1-LL0" firstAttribute="top" secondItem="FfO-Jl-TLX" secondAttribute="bottom" constant="23" id="7ce-h6-4D5"/>
                     <constraint firstAttribute="bottomMargin" secondItem="rYG-F1-LL0" secondAttribute="bottom" constant="45" id="9DJ-Sd-fvm"/>
                     <constraint firstItem="FfO-Jl-TLX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="B3s-ab-0d3"/>
+                    <constraint firstItem="FjP-eb-Po0" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="CeZ-OI-EqQ"/>
                     <constraint firstItem="rYG-F1-LL0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="53" id="Dxn-IN-nHd"/>
+                    <constraint firstItem="FjP-eb-Po0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="115" id="EzN-lG-ipC"/>
                     <constraint firstAttribute="trailingMargin" secondItem="rYG-F1-LL0" secondAttribute="trailing" constant="53" id="bBW-u8-ePN"/>
                     <constraint firstAttribute="trailing" secondItem="FfO-Jl-TLX" secondAttribute="trailing" id="jvn-AN-mhB"/>
                     <constraint firstItem="FfO-Jl-TLX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lrV-u3-rom"/>

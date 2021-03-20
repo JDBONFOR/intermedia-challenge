@@ -3,6 +3,8 @@ import Foundation
 protocol SuperheroesViewModelProtocol: class {
     func showError(_ error: Error)
     func finishLoadData()
+    func showLoader()
+    func hideLoader()
 }
 
 public class SuperheroesViewModel {
@@ -23,6 +25,7 @@ extension SuperheroesViewModel {
     
     func fetchData(limit: Int) {
         
+        self.delegate?.showLoader()
         isLoading = true
         
         guard let endpoints = Utils.getEndpoints() else { return }
@@ -36,6 +39,7 @@ extension SuperheroesViewModel {
             
             self.isLoading = false
             self.isMoreDataLoading = false
+            self.delegate?.hideLoader()
                         
             if let error = error {
                 self.delegate?.showError(error)

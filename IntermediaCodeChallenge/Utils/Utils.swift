@@ -3,6 +3,20 @@ import CommonCrypto
 
 class Utils: NSObject {
     
+    // Loader
+    static func showLoader(in controller: UIViewController) {
+                
+        let loaderVC = LoaderViewController()
+        loaderVC.modalPresentationStyle = .overCurrentContext
+        loaderVC.modalTransitionStyle = .crossDissolve
+                
+        controller.present(loaderVC, animated: false, completion: nil)
+    }
+    
+    static func hideLoader(in controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
     // Toast
     static func showToast(in controller: UIViewController,
                           backgroundColor: UIColor,
@@ -14,7 +28,7 @@ class Utils: NSObject {
         toastVC.backgroundColor = backgroundColor
         toastVC.message = title
                 
-        controller.present(toastVC, animated: true, completion: {
+        controller.present(toastVC, animated: false, completion: {
             Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
                 controller.dismiss(animated: true, completion: nil)
             })

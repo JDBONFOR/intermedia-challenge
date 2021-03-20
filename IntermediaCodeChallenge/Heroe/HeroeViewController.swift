@@ -12,6 +12,7 @@ class HeroeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Utils.showLoader(in: self)
         setupUI()
         fetchData()
     }
@@ -93,6 +94,14 @@ extension HeroeViewController: UITableViewDelegate, UITableViewDataSource {
 // HeroeViewModelProtocol
 extension HeroeViewController: HeroeViewModelProtocol {
  
+    func showLoader() {
+        Utils.showLoader(in: self)
+    }
+    
+    func hideLoader() {
+        Utils.hideLoader(in: self)
+    }
+    
     func finishLoadData() {
         
         navigationItem.title = viewModel.titleNavigator
