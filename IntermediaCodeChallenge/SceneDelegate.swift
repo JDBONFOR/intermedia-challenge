@@ -9,9 +9,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        // Check if user is logged
-        checkUserSession()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -40,30 +37,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-    }
-}
-
-// MARK: - Extensions
-extension SceneDelegate {
-    
-    func checkUserSession() {
-        
-        let userID = UserDefaults.standard.object(forKey: "user")
-        if userID != nil {
-            let story = UIStoryboard(name: "App", bundle: nil)
-            let homeVC = story.instantiateInitialViewController()!
-            let nav = UINavigationController.init(rootViewController: homeVC)
-            
-            nav.navigationBar.barTintColor = .navBarColor
-            nav.navigationBar.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor: UIColor.white,
-                NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 20) ?? UIFont.boldSystemFont(ofSize: 20)
-            ]
-            nav.navigationBar.topItem?.title = "Marvel Challenge"
-            
-            window?.rootViewController = nav
-        }
-        
     }
 }
 

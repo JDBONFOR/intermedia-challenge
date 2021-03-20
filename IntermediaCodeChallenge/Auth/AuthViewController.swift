@@ -15,6 +15,7 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkIfUserIsLogged()
         setupUI()
     }
     
@@ -46,6 +47,19 @@ class AuthViewController: UIViewController {
 
 // MARK: - Private Methods
 private extension AuthViewController {
+    
+    func checkIfUserIsLogged() {
+        let userID = UserDefaults.standard.object(forKey: "user")
+        if userID != nil {
+            let story = UIStoryboard(name: "App", bundle: nil)
+            let homeVC = story.instantiateInitialViewController()!
+            let nav = UINavigationController.init(rootViewController: homeVC)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
+        } else {
+            setupUI()
+        }
+    }
     
     func setupUI() {
         title = "Intermedia Challenge"
@@ -87,18 +101,7 @@ private extension AuthViewController {
                     Utils.showToast(in: self, backgroundColor: .successColor, title: "Hi \(email) 👋")
                     Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
                         
-                        let story = UIStoryboard(name: "App", bundle: nil)
-                        let homeVC = story.instantiateInitialViewController()!
-                        let nav = UINavigationController.init(rootViewController: homeVC)
-                        
-                        nav.navigationBar.barTintColor = .navBarColor
-                        nav.navigationBar.titleTextAttributes = [
-                            NSAttributedString.Key.foregroundColor: UIColor.white,
-                            NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 20) ?? UIFont.boldSystemFont(ofSize: 20)
-                        ]
-                        nav.navigationBar.topItem?.title = "Marvel Challenge"
-                        nav.modalPresentationStyle = .fullScreen
-                        self.present(nav, animated: true, completion: nil)
+                        self.checkIfUserIsLogged()
                         
                     })
                 }

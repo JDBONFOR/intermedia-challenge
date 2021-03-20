@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="-284" y="2.2488755622188905"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="cqP-s7-duO">
             <objects>
-                <tabBarController id="fyG-GL-0pt" sceneMemberID="viewController">
+                <tabBarController id="fyG-GL-0pt" customClass="TabBarViewController" customModule="IntermediaCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Cde-UB-tbw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

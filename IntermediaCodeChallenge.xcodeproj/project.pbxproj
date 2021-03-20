@@ -36,6 +36,7 @@
 		0E68E38B26069D2E00C5530F /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E38926069D2E00C5530F /* LoaderViewController.swift */; };
 		0E68E38C26069D2E00C5530F /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E38A26069D2E00C5530F /* LoaderViewController.xib */; };
 		0E68E3A52606A32B00C5530F /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E3A42606A32B00C5530F /* loader.json */; };
+		0E68E3AA2606ACE600C5530F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E3A92606ACE600C5530F /* TabBarViewController.swift */; };
 		0EFBEFF2260004A50027EFB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF1260004A50027EFB7 /* AppDelegate.swift */; };
 		0EFBEFF4260004A50027EFB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF3260004A50027EFB7 /* SceneDelegate.swift */; };
 		0EFBEFF6260004A50027EFB7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBEFF5260004A50027EFB7 /* AuthViewController.swift */; };
@@ -85,6 +86,7 @@
 		0E68E38926069D2E00C5530F /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		0E68E38A26069D2E00C5530F /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 		0E68E3A42606A32B00C5530F /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		0E68E3A92606ACE600C5530F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0EFBEFEE260004A50027EFB7 /* IntermediaCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntermediaCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFBEFF1260004A50027EFB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EFBEFF3260004A50027EFB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -323,6 +325,14 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
+		0E68E3AC2606AF6C00C5530F /* AppWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				0E68E3A92606ACE600C5530F /* TabBarViewController.swift */,
+			);
+			path = AppWrapper;
+			sourceTree = "<group>";
+		};
 		0EFBEFE5260004A50027EFB7 = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +358,7 @@
 				0E68E26A260157F900C5530F /* Core */,
 				0EFBF067260025D00027EFB7 /* Extensions */,
 				0EFBF04A260014D10027EFB7 /* Utils */,
+				0E68E3AC2606AF6C00C5530F /* AppWrapper */,
 				0EFBF08026002CE80027EFB7 /* Superheroes */,
 				0EFBF08B26002F340027EFB7 /* Heroe */,
 				0EFBF08126002CF90027EFB7 /* Events */,
@@ -639,6 +650,7 @@
 				0EFBF08926002F2C0027EFB7 /* SuperheroesViewController.swift in Sources */,
 				0E68E32926040BBA00C5530F /* TitleSectionHeroeCell.swift in Sources */,
 				0E68E24C260125A400C5530F /* SuperheroesCell.swift in Sources */,
+				0E68E3AA2606ACE600C5530F /* TabBarViewController.swift in Sources */,
 				0E68E2FB2602865100C5530F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
