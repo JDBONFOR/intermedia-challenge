@@ -24,6 +24,7 @@ class Utils: NSObject {
                 
         let toastVC = ToastVC()
         toastVC.modalPresentationStyle = .overCurrentContext
+        toastVC.modalTransitionStyle = .crossDissolve
         
         toastVC.backgroundColor = backgroundColor
         toastVC.message = title

@@ -11,11 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Firebase
         FirebaseApp.configure()
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Roboto-Regular", size: 12)!], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Roboto-Regular", size: 12)!], for: .selected)
-        UITabBar.appearance().tintColor = .tabBarSelectedColor
-        UITabBar.appearance().unselectedItemTintColor = .tabBarUnselectedColor
-        
+        // TabBar
+        setupTabBar()
+                
         return true
     }
 
@@ -34,4 +32,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+// MARK: - Private Methods
+private extension AppDelegate {
+    
+    func setupTabBar() {
+        
+        UITabBar.appearance().tintColor = .tabBarSelectedColor
+        UITabBar.appearance().unselectedItemTintColor = .tabBarUnselectedColor
+        
+        guard let font = UIFont(name: "Roboto-Regular", size: 12) else { return }
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .selected)
+        
+    }
+    
 }

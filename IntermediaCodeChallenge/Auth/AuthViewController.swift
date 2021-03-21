@@ -1,5 +1,4 @@
 import UIKit
-import FirebaseAuth
 
 class AuthViewController: UIViewController {
 
@@ -10,24 +9,21 @@ class AuthViewController: UIViewController {
     @IBOutlet private weak var signUpButton: UIButton!
     
     // MARK: - Vars
+    private var viewModel: AuthViewModel = AuthViewModel()
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.delegate = self
         checkIfUserIsLogged()
-        setupUI()
     }
     
     // MARK: - IBActions
     @IBAction func logInButtonAction(_ sender: Any) {
         
         if let email = emailTextField.text, let password = passwordTextField.text {
-            if isValidEmail(email) {
-                authUser(email, password, false)
-            } else {
-                Utils.showToast(in: self, backgroundColor: .errorColor, title: "Format email is not valid, check it out")
-            }
+            viewModel.isValidEmail(email, password, false)
         }
         
     }
@@ -35,11 +31,7 @@ class AuthViewController: UIViewController {
     @IBAction func signUpButtonAction(_ sender: Any) {
         
         if let email = emailTextField.text, let password = passwordTextField.text {
-            if isValidEmail(email) {
-                authUser(email, password, true)
-            } else {
-                Utils.showToast(in: self, backgroundColor: .errorColor, title: "Format email is not valid, check it out")
-            }
+            viewModel.isValidEmail(email, password, true)
         }
     }
     
@@ -49,64 +41,30 @@ class AuthViewController: UIViewController {
 private extension AuthViewController {
     
     func checkIfUserIsLogged() {
-        let userID = UserDefaults.standard.object(forKey: "user")
-        if userID != nil {
-            let story = UIStoryboard(name: "App", bundle: nil)
-            let homeVC = story.instantiateInitialViewController()!
-            let nav = UINavigationController.init(rootViewController: homeVC)
-            nav.modalPresentationStyle = .fullScreen
-            self.present(nav, animated: true, completion: nil)
-        } else {
-            setupUI()
-        }
+        viewModel.checkIfUserIsLogged()
+    }
+    
+        
+}
+
+// MARK: - Extensions
+extension AuthViewController: AuthViewModelProtocol {
+    func showToast(backgroundColor: UIColor, title: String) {
+        Utils.showToast(in: self, backgroundColor: backgroundColor, title: title)
+    }
+    
+    func openApp(_ nav: UINavigationController) {
+        self.present(nav, animated: false, completion: nil)
     }
     
     func setupUI() {
-        title = "Intermedia Challenge"
-    }
-    
-    func isValidEmail(_ email: String) -> Bool {
-        let format = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailChecked = NSPredicate(format:"SELF MATCHES %@", format)
-        return emailChecked.evaluate(with: email)
-    }
-    
-    func authUser(_ email: String, _ password: String, _ createUser: Bool) {
         
-        if createUser {
-            
-            Auth.auth().createUser(withEmail: email, password: password) { ( result, error) in
-                if let error = error {
-                    Utils.showToast(in: self, backgroundColor: .errorColor, title: error.localizedDescription)
-                } else {
-                    Utils.showToast(in: self, backgroundColor: .successColor, title: "Account created successfully, please Log in")
-                }
-            }
-            
-        } else {
-            
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                if let error = error {
-                    
-                    Utils.showToast(in: self, backgroundColor: .errorColor, title: error.localizedDescription)
-                    
-                } else if let result = result {
-                    
-                    #if DEBUG
-                    print("result \(result.user.uid)")
-                    #endif
-                    
-                    UserDefaults.standard.set(result.user.uid, forKey: "user")
-                    
-                    Utils.showToast(in: self, backgroundColor: .successColor, title: "Hi \(email) 👋")
-                    Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
-                        
-                        self.checkIfUserIsLogged()
-                        
-                    })
-                }
-            }
-            
-        }
-    }    
+        self.navigationController?.navigationBar.isHidden = true
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "background")
+        backgroundImage.contentMode = .scaleAspectFit
+        self.view.insertSubview(backgroundImage, at: 0)
+    }
+    
 }

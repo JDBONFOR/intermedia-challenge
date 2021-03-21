@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E6066BB2607ACC2007DB76D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6066BA2607ACC2007DB76D /* AuthViewModel.swift */; };
 		0E68E24C260125A400C5530F /* SuperheroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68E24A260125A400C5530F /* SuperheroesCell.swift */; };
 		0E68E24D260125A400C5530F /* SuperheroesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E24B260125A400C5530F /* SuperheroesCell.xib */; };
 		0E68E252260132F800C5530F /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E68E251260132F700C5530F /* RobotoCondensed-Bold.ttf */; };
@@ -58,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E6066BA2607ACC2007DB76D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0E68E24A260125A400C5530F /* SuperheroesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroesCell.swift; sourceTree = "<group>"; };
 		0E68E24B260125A400C5530F /* SuperheroesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperheroesCell.xib; sourceTree = "<group>"; };
 		0E68E251260132F700C5530F /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E6066B92607ACAD007DB76D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E6066BA2607ACC2007DB76D /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0E68E2492601257E00C5530F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 		0E68E2DB2602597B00C5530F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				0E6066B92607ACAD007DB76D /* ViewModel */,
 				0EFBEFF5260004A50027EFB7 /* AuthViewController.swift */,
 			);
 			path = Auth;
@@ -648,6 +659,7 @@
 				0E68E3162604087400C5530F /* HeaderSectionHeroeCellModel.swift in Sources */,
 				0E68E31D2604092300C5530F /* ComicsSectionHeroeCellViewModel.swift in Sources */,
 				0EFBF08926002F2C0027EFB7 /* SuperheroesViewController.swift in Sources */,
+				0E6066BB2607ACC2007DB76D /* AuthViewModel.swift in Sources */,
 				0E68E32926040BBA00C5530F /* TitleSectionHeroeCell.swift in Sources */,
 				0E68E24C260125A400C5530F /* SuperheroesCell.swift in Sources */,
 				0E68E3AA2606ACE600C5530F /* TabBarViewController.swift in Sources */,
