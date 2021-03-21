@@ -13,6 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // TabBar
         setupTabBar()
+        
+        // NavigationBar
+        setupNavigationBar()
                 
         return true
     }
@@ -47,6 +50,15 @@ private extension AppDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .selected)
         
+    }
+    
+    func setupNavigationBar() {
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().barTintColor = .navBarColor
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 20) ?? UIFont.boldSystemFont(ofSize: 20)
+        ]
     }
     
 }

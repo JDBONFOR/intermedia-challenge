@@ -21,14 +21,8 @@ class TabBarViewController: UITabBarController {
 private extension TabBarViewController {
     
     func setupUI() {
-        self.navigationController?.navigationBar.barTintColor = .navBarColor
-        self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 20) ?? UIFont.boldSystemFont(ofSize: 20)
-        ]
-        self.navigationController?.navigationBar.topItem?.title = "Marvel Challenge"
         
-        // LogOut Button
+        self.navigationController?.navigationBar.topItem?.title = "Marvel Challenge"
         self.navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "lock"), style: .plain, target: self, action: #selector(closeSession))
     }
     

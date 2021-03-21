@@ -29,7 +29,7 @@ class Utils: NSObject {
         toastVC.backgroundColor = backgroundColor
         toastVC.message = title
                 
-        controller.present(toastVC, animated: false, completion: {
+        controller.present(toastVC, animated: true, completion: {
             Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
                 controller.dismiss(animated: true, completion: nil)
             })

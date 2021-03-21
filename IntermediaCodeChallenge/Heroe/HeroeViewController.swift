@@ -106,8 +106,7 @@ extension HeroeViewController: HeroeViewModelProtocol {
         
         navigationItem.title = viewModel.titleNavigator
         navigationController?.navigationBar.backItem?.title = ""
-        navigationController?.navigationBar.tintColor = .white
-        
+                
         tableView.reloadData()
     }
 }
